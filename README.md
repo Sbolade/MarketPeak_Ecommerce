@@ -2,36 +2,41 @@ The first step while trying to complete this project was to understand the proje
 
 **Task 1.1 initialise git repository**
 
-- The prequesite for git initialisation is to the installation of git on the local machine. To install git using this command should be used "sudo apt install git" for linux/unix operation systems
-- Following the installation , to ensure git is intialised on the right directory , we need to ensure we are in the right directory. For this project , the task is to be able to create a directory on the local machine and change the directory into the newly created directorty. To create the directory , the command "mkdir" can be used following by the folder name.
-- To access the newly created directory , the command "cd" following by the directory name should be used .
-- To start or initialise Git , whilst in the newly created directory , the command "git init" should be used to initialise git.
+- The first step in setting up Git on your local machine is to ensure that Git is installed. For Linux/Unix operating systems, you can use the following command:#sudo apt install git
+- This command installs Git on your machine, making it available for use. Once Git is installed, the next step is to initialize Git in the desired directory. Make sure you are in the right directory where you want to set up your Git repository.
+- To create a new directory, you can use the "mkdir" command followed by the desired folder name
+- After creating the directory, navigate into it using the "cd" command
+- Now that you we are in the correct directory, it's time to initialize Git. Use the following command to initialize a new Git repository "git init" This command initializes Git in the current directory, setting it up for version control. From this point onward, you can start adding files, making commits, and utilizing Git for tracking changes in your project
 
 **Task 1.2 Obtain and prepare the E-commerce Website Template**
 
 - This tasks is to enable us to download a ready made website template that can be tailored for us and hosted on the webserver, This will serve as our product ( where the changes will be made)
-- I naviagted to the site provided tooplate.com and download the specific template for the project. As I have no html skills , I didnt not make any amendment to the template and used as it is
+- To initiate this process, I navigated to the website provided, specifically tooplate.com, and proceeded to download the template that best suited the project's requirements. Since I lack proficiency in HTML, I opted not to make any alterations to the template and utilized it in its original form
+  
   
 **Task 1.3 Stage and Commit the template to git**
   
-- For the newly downloaded website template to be added to git , the file firstly needed to be uploaded onto the requried folder i.e MarketPeak_Ecommerce
-- Once this was added and for me to add the website downloaded to git , I used the command "git add ." which denotes adding all content in the current folder to git i.e adding the downloaded website template to git
-- For tracking and logging purposes , it is important to set up username and useremail . This especially will be useful in real life scenarios for tracking , reporting and auditing purposes. To set up user name and user email , I used the command "git config --global user.name" and "git config --global user.email"
-- After configuration I made my first commit with a comment using "git commit -m" following by my comment 
-- All above configuraion and changes are remote changes i.e changees made on local machine , for this changes to be uploaded on the main repository , this change will need to be pushed to origin using the command "git push -u origin main"
+- To integrate the newly downloaded website template into Git, a series of steps were undertaken. Firstly, the file needed to be uploaded to the designated folder, which in this case is "MarketPeak_Ecommerce." Once the template was added to the required folder, the following Git commands were executed
+- Adding the Template to Git:To include the downloaded website template in the Git repository, the command git add . was utilized. This command signifies the addition of all content in the current folder to Git, effectively incorporating the template into version control.
+- To ensure effective tracking, reporting, and auditing, it is crucial to configure the username and user email associated with the Git commits. I used the command "git config --global user.name" and "git config --global user.email"
+- Making the First Commit: Following the configuration, the initial commit was performed using the command git commit -m "comment". This command captures a snapshot of the changes made, with the comment providing context and information about the nature of the commit.
+- Pushing Changes to the Main Repository:The aforementioned configurations and changes were local adjustments on the machine. To synchronize these changes with the central repository, the command git push -u origin main was executed. This command uploads the committed changes to the "main" branch on the central repository, ensuring that the central repository reflects the latest updates made locally.
 
 **Challenge**: 
-When I ran that command , this came back with the error notifying me that the remote branch and the one on github are different i.e the default branch on the git remote branch is "master" while the default branch on github is "main" 
+Upon executing the command git push -u origin main, an error was encountered indicating a discrepancy between the default branch names on the local machine and GitHub. The error message revealed that the default branch on the local Git repository was set to "master," while the corresponding branch on GitHub was named "main."
 
-- To resolve the issue , i renamed the remote default branch to main using the command "git branch -m Master Main"
-- I rerun the command and my website was added on github
+- Check Local Branch Name:Verify the name of the default branch on the local machine using the command:git branch
+- Rename Local Branch: Rename the local branch from "master" to "main" using the following commands:git branch -m master main
+- Update the local branch reference to align with the central branch name.
 
 **AWS Deployment**
 
-The creation is AWS instance is to enable the website to be hosted on the server created on AWS
-- For me to create the server I logged in my AWS account
-- Launch an EC2 instance allowing the inbound traffic from HTTp , HTTPS and SSH
-- Connected to my instance via SSH using my keypair downloaded from AWS
+The process of creating an AWS instance is crucial for hosting a website on the server provided by AWS. Here are the steps I took to achieve this:
+Logging into AWS Account: To initiate the creation of the AWS instance, I first logged into AWS account. This involves accessing the AWS Management Console.
+Launching an EC2 Instance: After logging in, I proceeded to launch an EC2 instance. This involves selecting the desired AMI, specifying instance details such as type and size, configuring security groups, and defining key pairs for secure access.
+Configuring Inbound Traffic Rules: During the EC2 instance launch, I configured the security groups to allow specific types of inbound traffic. I opened ports for HTTP (typically port 80), HTTPS (typically port 443), and SSH (typically port 22). This ensures that the website can handle web traffic securely and that I have SSH access to manage the instance
+Connecting to the Instance via SSH.
+After the instance was successfully launched, I connected to it via SSH using the key pair downloaded from AWS during the instance creation process. 
 
 **2.2 Clone the repository on the linux server**
 
