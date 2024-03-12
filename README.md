@@ -1,21 +1,22 @@
 The first step while trying to complete this project was to understand the project objectives , expected outcomes and briefly the high-level required steps
-Task 1.1 initialise git repository 
-The prequesite for git initialisation is to the installation of git on the local machine. To install git using this command should be used "sudo apt install git" for linux/unix operation systems
-Following the installation , to ensure git is intialised on the right directory , we need to ensure we are in the right directory. For this project , the task is to be able to create a directory on the local machine and change the directory into the newly created directorty. To create the directory , the command "mkdir" can be used following by the folder name.
-To access the newly created directory , the command "cd" following by the directory name should be used .
-To start or initialise Git , whilst in the newly created directory , the command "git init" should be used to initialise git.
+**Task 1.1 initialise git repository **
+- The prequesite for git initialisation is to the installation of git on the local machine. To install git using this command should be used "sudo apt install git" for linux/unix operation systems
+- Following the installation , to ensure git is intialised on the right directory , we need to ensure we are in the right directory. For this project , the task is to be able to create a directory on the local machine and change the directory into the newly created directorty. To create the directory , the command "mkdir" can be used following by the folder name.
+- To access the newly created directory , the command "cd" following by the directory name should be used .
+- To start or initialise Git , whilst in the newly created directory , the command "git init" should be used to initialise git.
 
-Task 1.2 Obtain and prepare the E-commerce Website Template - This tasks is to enable us to download a ready made website template that can be tailored for us and hosted on the webserver, This will serve as our product ( where the changes will be made)
-I naviagted to the site provided tooplate.com and download the specific template for the project. As I have no html skills , I didnt not make any amendment to the template and used as it is
-1.3 Stage and Commit the template to git 
-For the newly downloaded website template to be added to git , the file firstly needed to be uploaded onto the requried folder i.e MarketPeak_Ecommerce
-Once this was added and for me to add the website downloaded to git , I used the command "git add ." which denotes adding all content in the current folder to git i.e adding the downloaded website template to git
-For tracking and logging purposes , it is important to set up username and useremail . This especially will be useful in real life scenarios for tracking , reporting and auditing purposes. To set up user name and user email , I used the command "git config --global user.name" and "git config --global user.email"
-After configuration I made my first commit with a comment using "git commit -m" following by my comment 
-All above configuraion and changes are remote changes i.e changees made on local machine , for this changes to be uploaded on the main repository , this change will need to be pushed to origin using the command "git push -u origin main"
-Challenge : When I ran that command , this came back with the error notifying me that the remote branch and the one on github are different i.e the default branch on the git remote branch is "master" while the default branch on github is "main" 
-To resolve the issue , i renamed the remote default branch to main using the command "git branch -m Master Main"
-I rerun the command and my website was added on github
+**Task 1.2 Obtain and prepare the E-commerce Website Template**
+- This tasks is to enable us to download a ready made website template that can be tailored for us and hosted on the webserver, This will serve as our product ( where the changes will be made)
+- I naviagted to the site provided tooplate.com and download the specific template for the project. As I have no html skills , I didnt not make any amendment to the template and used as it is
+**1.3 Stage and Commit the template to git **
+- For the newly downloaded website template to be added to git , the file firstly needed to be uploaded onto the requried folder i.e MarketPeak_Ecommerce
+- Once this was added and for me to add the website downloaded to git , I used the command "git add ." which denotes adding all content in the current folder to git i.e adding the downloaded website template to git
+- For tracking and logging purposes , it is important to set up username and useremail . This especially will be useful in real life scenarios for tracking , reporting and auditing purposes. To set up user name and user email , I used the command "git config --global user.name" and "git config --global user.email"
+- After configuration I made my first commit with a comment using "git commit -m" following by my comment 
+- All above configuraion and changes are remote changes i.e changees made on local machine , for this changes to be uploaded on the main repository , this change will need to be pushed to origin using the command "git push -u origin main"
+- **Challenge **: When I ran that command , this came back with the error notifying me that the remote branch and the one on github are different i.e the default branch on the git remote branch is "master" while the default branch on github is "main" 
+- To resolve the issue , i renamed the remote default branch to main using the command "git branch -m Master Main"
+- I rerun the command and my website was added on github
 
 AWS Deployment 
 The creation os AWS instance is to enable the website to be hosted on the server created on AWS
